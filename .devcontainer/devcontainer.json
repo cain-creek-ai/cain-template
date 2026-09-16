@@ -5,6 +5,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "Anthropic.claude",
         "OpenAI.chatgpt",
         "Google.geminicodeassist",
         "ms-python.python",
