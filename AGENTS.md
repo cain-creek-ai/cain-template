@@ -101,3 +101,38 @@ If repository files cannot be accessed or edited from Codex in VS Code:
 ## Definition of Done
 
 A task is complete when the requested direct edits are made and the response includes a brief summary of changed files, important assumptions, and any manual validation the user should perform.
+
+## Python Environment
+
+- **Python Version:** 3.11, as specified in `.devcontainer/devcontainer.json`.
+- **Package Manager:** pip. Dev tools: ruff (linting) and pytest (when tests exist).
+- **Install Commands:** Run only when the user requests setup, per the dependency installation rule above: `pip install -r requirements.txt` (production) and `pip install -r requirements-dev.txt` (development, includes JupyterLab).
+- **Run Commands:** `jupyter lab` for notebooks, `python scripts/my_script.py` for scripts, `pytest` for tests when they exist, and `ruff check .` for linting. When command execution is blocked, give these commands to the user to run.
+- **Code Style:** Follow PEP 8 conventions (ruff enforces this).
+- **Testing:** Test notebook and script changes before committing.
+
+## Spatial Data Storage and Practices
+
+- **Never Commit Binaries:** Never commit large binary spatial files (`.shp`, `.gdb`, `.tif`, `.gpkg`, etc.). See `.gitignore` for the full blocklist.
+- **Storage Folders:** Store raw data in `data/raw/` and processed outputs in `data/processed/`. Both are git-ignored. Document schema, CRS, and data transformations in notebooks or `docs/`.
+- **Geometry Checks:** Check for null geometries, self-intersections, or invalid coordinates before processing.
+- **Large Datasets:** For datasets over 100 MB, use `geopandas` chunking, spatial indexing, or filtering.
+- **CRS:** State the CRS explicitly for every spatial operation, and verify it against metadata, shapefiles, or GeoJSON properties.
+
+## Environment Variables and Secrets
+
+- Use `.env.example` as a template. Create a local `.env` file (git-ignored) for ArcGIS Online credentials, API keys, portal URLs or service names, and other sensitive configuration.
+- Never commit actual credentials or `.env` contents to Git.
+
+## Repository Data Classification
+
+- All code in this repository follows TDA data classification and security guidelines.
+
+## ArcGIS Online and Enterprise Safety
+
+Before modifying hosted layers, feature services, or scheduled jobs:
+
+1. Confirm the target portal URL and account.
+2. Identify item IDs and service names.
+3. Prefer dry-run behavior for new scripts.
+4. Never overwrite services or truncate data without explicit user confirmation.
