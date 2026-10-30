@@ -1,10 +1,9 @@
 # [Project Title Here]
 
-**tin+topo**
+**cain si**
 
+[![cain](https://img.shields.io/badge/cain)](https://www.colinstiles.com)
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![Geopandas](https://img.shields.io/badge/Geopandas-Active-success.svg)](https://geopandas.org/)
-[![AGOL](https://img.shields.io/badge/ArcGIS_Online-Ready-orange.svg)](https://www.arcgis.com/)
 
 > **Briefly describe the purpose of this project here.** What spatial problem does this solve? Who is the end user? What data does it produce?
 
@@ -67,5 +66,5 @@ This repository is pre-configured to work seamlessly with `tin+topo's` AI coding
 
 ## Point of Contact
 
-* **Project Owner:** Colin T. Stiles | cts@tinandtopo.com
+* **Project Owner:** Colin T. Stiles | colin@colinstiles.com
 * **Last Updated:** [Date]

@@ -1,8 +1,6 @@
 # AI Agent Configuration
 
-This document defines standard operating procedures, environmental constraints, and coding standards for AI coding agents working in `tin+topo's` repositories.
-
-These instructions are intended for Codex in VS Code and may also be followed by other coding agents such as Cline or Gemini.
+This document defines standard operating procedures, environmental constraints, and coding standards for AI coding agents working in `cain's` repositories.
 
 ## Primary Objective
 
@@ -73,15 +71,6 @@ Make the smallest safe change that satisfies the user's request while preserving
 - **Corporate Proxy:** TDA team members operate behind a Zscaler corporate proxy.
 - **External Requests:** When writing scripts that make external network requests, remind the user that they may need to configure the script to trust their local Zscaler certificate path.
 - **TLS Verification:** Do not recommend disabling TLS verification except as a temporary internal troubleshooting step. If mentioned, clearly label `verify=False` or equivalent settings as temporary and not appropriate for production.
-
-## Coding Standards & Preferences
-
-- **Python:** Prefer `geopandas`, `pandas`, `arcpy`, and the ArcGIS API for Python for spatial and ArcGIS workflows.
-- **Arcade:** Prefer clear, defensive Arcade expressions with explicit null handling and simple branching.
-- **Notebooks:** When editing Jupyter notebooks (`.ipynb`), modify only the exact code cells requested. Avoid broad JSON rewrites.
-- **Node.js:** Use ES6 syntax and prefer native `fetch` over third-party request libraries where practical.
-- **Documentation:** Use concise comments for complex spatial logic, projections, assumptions, or data transformations.
-- **Markdown:** Preserve existing heading style, list style, table alignment, and terminology unless the user asks for cleanup.
 
 ## Git and Pull Request Behavior
 
