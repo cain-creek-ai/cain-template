@@ -59,7 +59,7 @@ pip install -r requirements-dev.txt
 
 ## AI Agent Compatibility
 
-This repository is pre-configured to work seamlessly with `tin+topo's` AI coding assistants and enterprise models.
+This repository is pre-configured to work seamlessly with `cain's` AI coding assistants and enterprise models.
 * Please refer to `AGENTS.md and `CLAUDE.md`` for specific instructions on how agents should interact with this codebase.
 
 ---
